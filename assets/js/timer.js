@@ -44,6 +44,13 @@ function addButtons () {
 
   button1.addEventListener("click", function(){
       window.clearTimeout(timeoutID);
+      div2.removeChild(button1);
+      div2.removeChild(button2);
+
+      var div1 = document.querySelector("#alert");
+      var h2 = document.querySelector("h2");
+      div1.removeChild(h2);
+
       delayedAlert();
   });
 
