@@ -1,0 +1,47 @@
+/*********** Global ***********/
+
+h1, h2, h3 {
+	font-family: "Merriweather", serif;
+}
+
+/*********** end Global ***********/
+
+
+body {
+
+}
+
+main {
+	
+}
+
+section {
+
+}
+
+article {
+
+}
+
+#mainDiv {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-top: -20px;
+	margin-left: -106px;
+}
+
+#buttons {
+	display: block;
+}
+
+button:first-child {
+	margin-left: 60px;
+}
+
+button:last-child {
+	margin-right: 60px;
+	margin-left: 10px;
+}
+
+
