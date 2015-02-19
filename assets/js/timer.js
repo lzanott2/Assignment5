@@ -10,6 +10,8 @@ function delayedAlert() {
 function sessionAlert() {
     var main = document.querySelector("main");
 
+    main.innerHTML = " ";
+
     var mainDiv = document.createElement("div");
     mainDiv.setAttribute("id", "mainDiv");
     main.appendChild(mainDiv);
@@ -44,6 +46,8 @@ function addButtons () {
 
   button1.addEventListener("click", function(){
       window.clearTimeout(timeoutID);
+
+      
       div2.removeChild(button1);
       div2.removeChild(button2);
 
@@ -51,10 +55,11 @@ function addButtons () {
       var h2 = document.querySelector("h2");
       div1.removeChild(h2);
 
+
       delayedAlert();
   });
 
-  button2.addEventListener("click", function(){
+  button2.addEventListener("click", function() {
       window.location.href = "http://google.com";
   });
 
