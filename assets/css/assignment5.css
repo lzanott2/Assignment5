@@ -4,6 +4,10 @@ h1, h2, h3 {
 	font-family: "Merriweather", serif;
 }
 
+p {
+	padding-bottom: 10px;
+}
+
 /*********** end Global ***********/
 
 
@@ -21,6 +25,15 @@ section {
 
 article {
 
+}
+
+#widgets {
+	margin: 20px 50px 50px;
+}
+
+
+h2.demoHeaders {
+	padding-top: 10px;
 }
 
 #mainDiv {

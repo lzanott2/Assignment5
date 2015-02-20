@@ -6,15 +6,52 @@
       <meta name="description" content="Loriana Zanotti jQuery UI"/>
       <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
       <link href="assets/css/reset.css" type="text/css" rel="stylesheet"/>
+      <link href="jquery-ui.css" rel="stylesheet">
       <link rel="stylesheet" href="assets/css/assignment5.css"/>
-
   </head>
 
 
  <body>
     <main>
-        
+      <div id = "widgets">
+          <!-- Slider -->
+          <h2 class="demoHeaders">Slider</h2>
+          <p>
+            <label for="amount">Donation amount ($50 increments):</label>
+            <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+            <div id="slider"></div>    
+          </p>  
+ 
+          <!-- Datepicker -->
+          <h2 class="demoHeaders">Datepicker</h2>
+          <p>Date: <input type="text" id="datepicker"></p>
+      </div> <!-- end div widgets -->
     </main>
-        <script type="text/javascript" src="assets/js/timer.js"></script>
+
+    <script type="text/javascript" src="assets/js/timer.js"></script>
+    <script src="external/jquery/jquery.js"></script>
+    <script src="jquery-ui.js"></script>
+    <script>
+
+        $( "#datepicker" ).datepicker({
+          inline: true
+        });
+
+        $(function() {
+          $( "#slider" ).slider({
+            value:100,
+            min: 0,
+            max: 200,
+            step: 25,
+            slide: function( event, ui ) {
+              $( "#amount" ).val( "$" + ui.value );
+            }
+          });
+
+          $( "#amount" ).val( "$" + $( "#slider" ).slider( "value" ) );
+        });
+
+    </script>
+
   </body>
 </html>

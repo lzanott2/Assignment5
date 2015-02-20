@@ -1,6 +1,7 @@
 delayedAlert();
 var timeoutID;
 var main = document.querySelector("main");
+var mainDiv = document.createElement("div");
 
 function delayedAlert() {
   timeoutID = window.setTimeout(sessionAlert, 10000);
@@ -8,7 +9,6 @@ function delayedAlert() {
 
 
 function sessionAlert() {
-    var mainDiv = document.createElement("div");
     mainDiv.setAttribute("id", "mainDiv");
     main.appendChild(mainDiv);
 
@@ -25,8 +25,6 @@ function sessionAlert() {
 
 
 function addButtons () { 
-  var mainDiv = document.querySelector("#mainDiv"); 
-  
   var div2 = document.createElement("div");
   div2.setAttribute("id", "buttons");
   mainDiv.appendChild(div2);
@@ -41,7 +39,7 @@ function addButtons () {
 
 
   button1.addEventListener("click", function(){
-    main.innerHTML = '';
+    mainDiv.innerHTML = '';
     delayedAlert();
   });
 
